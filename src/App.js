@@ -9,8 +9,20 @@ class App extends Component {
     super(props);
 
     this.state = {
-      educationElements: [<Education key={uniqid()} />],
-      experienceElements: [<Experience key={uniqid()} />]
+      educationElements: [
+        <Education
+          key={uniqid()}
+          listId={uniqid()}
+          delete={this.deleteEducationElement}
+        />
+      ],
+      experienceElements: [
+        <Experience
+          key={uniqid()}
+          listId={uniqid()}
+          delete={this.deleteExperienceElement}
+        />
+      ]
     };
   }
 
@@ -19,7 +31,11 @@ class App extends Component {
       return {
         educationElements: [
           ...prevState.educationElements,
-          <Education key={uniqid()} />
+          <Education
+            key={uniqid()}
+            listId={uniqid()}
+            delete={this.deleteEducationElement}
+          />
         ]
       };
     });
@@ -30,9 +46,31 @@ class App extends Component {
       return {
         experienceElements: [
           ...prevState.experienceElements,
-          <Experience key={uniqid()} />
+          <Experience
+            key={uniqid()}
+            listId={uniqid()}
+            delete={this.deleteExperienceElement}
+          />
         ]
       };
+    });
+  };
+
+  deleteEducationElement = (id) => {
+    let newList = this.state.educationElements.filter(
+      (element) => element.props.listId !== id
+    );
+    this.setState({
+      educationElements: newList
+    });
+  };
+
+  deleteExperienceElement = (id) => {
+    let newList = this.state.experienceElements.filter(
+      (element) => element.props.listId !== id
+    );
+    this.setState({
+      experienceElements: newList
     });
   };
 
