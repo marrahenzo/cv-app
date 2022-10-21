@@ -1,0 +1,13 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label,
+input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
