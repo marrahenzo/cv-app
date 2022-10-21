@@ -14,6 +14,7 @@ class Experience extends Component {
         <Input label='Main Task(s)' type='text' placeholder='Web development' />
         <Input label='Worked from' type='date' placeholder='' />
         <Input label='Worked until' type='date' placeholder='' />
+        <button onClick={() => this.props.delete(this.props.listId)}>X</button>
       </div>
     );
   }

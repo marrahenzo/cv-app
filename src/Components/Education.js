@@ -17,6 +17,7 @@ class Education extends Component {
         />
         <Input label='Start of Study' type='date' placeholder='' />
         <Input label='End of Study' type='date' placeholder='' />
+        <button onClick={() => this.props.delete(this.props.listId)}>X</button>
       </div>
     );
   }
