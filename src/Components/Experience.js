@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import '../Styles/Experience.css';
 
 class Experience extends Component {
   render() {
@@ -9,33 +10,28 @@ class Experience extends Component {
           label='Company name'
           type='text'
           placeholder='MarraSoft Inc.'
-          className='job-name'
+          id='job-name'
         />
         <Input
           label='Position'
           type='text'
           placeholder='Full-Stack Developer'
-          className='job-position'
+          id='job-position'
         />
         <Input
           label='Main Task(s)'
           type='text'
           placeholder='Web development'
-          className='job-tasks'
+          id='job-tasks'
         />
-        <Input
-          label='Worked from'
-          type='date'
-          placeholder=''
-          className='job-from'
-        />
-        <Input
-          label='Worked until'
-          type='date'
-          placeholder=''
-          className='job-until'
-        />
-        <button onClick={() => this.props.delete(this.props.listId)}>X</button>
+        <Input label='Worked from' type='date' placeholder='' id='job-from' />
+        <Input label='Worked until' type='date' placeholder='' id='job-until' />
+        <button
+          id='delete-button'
+          onClick={() => this.props.delete(this.props.listId)}
+        >
+          X
+        </button>
       </div>
     );
   }
