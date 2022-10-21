@@ -17,10 +17,10 @@ class Input extends Component {
   };
 
   render() {
-    const { label, type, placeholder } = this.props;
+    const { label, type, placeholder, id } = this.props;
 
     return (
-      <div className='input'>
+      <div className='input' id={id}>
         <label htmlFor={label}>{`${label}`}</label>
         <input
           name={label}
