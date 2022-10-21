@@ -10,28 +10,28 @@ class Education extends Component {
           label='School name'
           type='text'
           placeholder='Universidad de La Matanza'
-          className='school-name'
+          id='school-name'
         />
         <Input
           label='Title of Study'
           type='text'
           placeholder='Mobile Development'
-          className='school-title'
+          id='school-title'
         />
         <Input
           label='Start of Study'
           type='date'
           placeholder=''
-          className='school-start'
+          id='school-start'
         />
         <Input
           label='End of Study'
           type='date'
           placeholder=''
-          className='school-end'
+          id='school-end'
         />
         <button
-          className='delete-button'
+          id='delete-button'
           onClick={() => this.props.delete(this.props.listId)}
         >
           X
