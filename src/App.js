@@ -4,6 +4,7 @@ import Input from './Components/Input';
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import Image from './Components/Image';
+import './Styles/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -78,9 +79,9 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <form onSubmit={(event) => event.preventDefault()}>
-          <Image />
+        <form onSubmit={(event) => event.preventDefault()} className='app-form'>
           <div id='personal-data'>
+            <Image />
             <Input
               label='Full Name'
               type='text'
@@ -89,17 +90,25 @@ class App extends Component {
           </div>
           <div id='education'>
             {this.state.educationElements}
-            <button type='button' onClick={this.addEducationElement}>
+            <button
+              type='button'
+              onClick={this.addEducationElement}
+              class='button-add'
+            >
               +
             </button>
           </div>
           <div id='experience'>
             {this.state.experienceElements}
-            <button type='button' onClick={this.addExperienceElement}>
+            <button
+              type='button'
+              onClick={this.addExperienceElement}
+              class='button-add'
+            >
               +
             </button>
           </div>
-          <button>Submit</button>
+          <button id='button-submit'>Submit</button>
         </form>
       </div>
     );
