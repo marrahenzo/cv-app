@@ -1,0 +1,43 @@
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr 10vw;
+  grid-template-rows: 50px 100px 200px 100px;
+  justify-content: center;
+  text-align: center;
+}
+
+#job-name {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#job-position {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#job-tasks {
+  grid-column: 1;
+  grid-row: 3/4;
+  width: 500px;
+  height: 300px;
+  resize: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#job-from {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#job-until {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#delete-button {
+  grid-column: 3;
+  grid-row: 1;
+}
