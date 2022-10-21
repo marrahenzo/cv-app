@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import '../Styles/Education.css';
 
 class Education extends Component {
   render() {
@@ -9,15 +10,32 @@ class Education extends Component {
           label='School name'
           type='text'
           placeholder='Universidad de La Matanza'
+          className='school-name'
         />
         <Input
           label='Title of Study'
           type='text'
           placeholder='Mobile Development'
+          className='school-title'
         />
-        <Input label='Start of Study' type='date' placeholder='' />
-        <Input label='End of Study' type='date' placeholder='' />
-        <button onClick={() => this.props.delete(this.props.listId)}>X</button>
+        <Input
+          label='Start of Study'
+          type='date'
+          placeholder=''
+          className='school-start'
+        />
+        <Input
+          label='End of Study'
+          type='date'
+          placeholder=''
+          className='school-end'
+        />
+        <button
+          className='delete-button'
+          onClick={() => this.props.delete(this.props.listId)}
+        >
+          X
+        </button>
       </div>
     );
   }
