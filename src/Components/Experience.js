@@ -18,12 +18,7 @@ class Experience extends Component {
           placeholder='Full-Stack Developer'
           id='job-position'
         />
-        <Input
-          label='Main Task(s)'
-          type='text'
-          placeholder='Web development'
-          id='job-tasks'
-        />
+        <textarea id='job-tasks'></textarea>
         <Input label='Worked from' type='date' placeholder='' id='job-from' />
         <Input label='Worked until' type='date' placeholder='' id='job-until' />
         <button
