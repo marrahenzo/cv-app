@@ -3,6 +3,7 @@ import Experience from './Components/Experience';
 import Input from './Components/Input';
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
+import Image from './Components/Image';
 
 class App extends Component {
   constructor(props) {
@@ -78,6 +79,7 @@ class App extends Component {
     return (
       <div className='App'>
         <form onSubmit={(event) => event.preventDefault()}>
+          <Image />
           <div id='personal-data'>
             <Input
               label='Full Name'
