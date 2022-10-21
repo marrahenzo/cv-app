@@ -9,13 +9,25 @@ class Input extends Component {
     };
   }
 
+  handleChange = (event) => {
+    this.setState({
+      value: event.target.value
+    });
+  };
+
   render() {
     const { label, type, placeholder } = this.props;
 
     return (
       <div className='input'>
-        <label>{`${label}`}</label>
-        <input type={type} placeholder={placeholder} />
+        <label htmlFor={label}>{`${label}`}</label>
+        <input
+          name={label}
+          type={type}
+          placeholder={placeholder}
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
