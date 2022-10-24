@@ -76,10 +76,15 @@ class App extends Component {
     });
   };
 
+  submit = (event) => {
+    event.preventDefault();
+    console.log(event);
+  };
+
   render() {
     return (
       <div className='App'>
-        <form onSubmit={(event) => event.preventDefault()} className='app-form'>
+        <form onSubmit={(event) => this.submit(event)} className='app-form'>
           <PersonalData />
           <div id='education'>
             {this.state.educationElements}
@@ -95,5 +100,7 @@ class App extends Component {
     );
   }
 }
+
+/*Photo by <a href="https://unsplash.com/@fortyozsteak?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joe Shields</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
 
 export default App;
