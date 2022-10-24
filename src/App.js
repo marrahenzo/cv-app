@@ -87,7 +87,7 @@ class App extends Component {
           </div>
           <div id='experience'>
             {this.state.experienceElements}
-            <AddButton onclick={this.addEducationElement} />
+            <AddButton onclick={this.addExperienceElement} />
           </div>
           <button id='button-submit'>Submit</button>
         </form>
