@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import './Styles/App.css';
 import PersonalData from './Components/PersonalData';
+import AddButton from './Components/AddButton';
 
 class App extends Component {
   constructor(props) {
@@ -82,23 +83,11 @@ class App extends Component {
           <PersonalData id='personal-data' />
           <div id='education'>
             {this.state.educationElements}
-            <button
-              type='button'
-              onClick={this.addEducationElement}
-              class='button-add'
-            >
-              +
-            </button>
+            <AddButton onclick={this.addEducationElement} />
           </div>
           <div id='experience'>
             {this.state.experienceElements}
-            <button
-              type='button'
-              onClick={this.addExperienceElement}
-              class='button-add'
-            >
-              +
-            </button>
+            <AddButton onclick={this.addEducationElement} />
           </div>
           <button id='button-submit'>Submit</button>
         </form>
