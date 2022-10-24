@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import Image from './Components/Image';
 import './Styles/App.css';
+import PersonalData from './Components/PersonalData';
 
 class App extends Component {
   constructor(props) {
@@ -80,14 +81,7 @@ class App extends Component {
     return (
       <div className='App'>
         <form onSubmit={(event) => event.preventDefault()} className='app-form'>
-          <div id='personal-data'>
-            <Image />
-            <Input
-              label='Full Name'
-              type='text'
-              placeholder='Hernán Marrapodi'
-            />
-          </div>
+          <PersonalData id='personal-data' />
           <div id='education'>
             {this.state.educationElements}
             <button
