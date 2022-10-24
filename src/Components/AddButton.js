@@ -4,7 +4,7 @@ class AddButton extends Component {
   render() {
     const { onclick } = this.props;
     return (
-      <button onClick={onclick} className='button-add'>
+      <button type='button' onClick={onclick} className='button-add'>
         +
       </button>
     );
