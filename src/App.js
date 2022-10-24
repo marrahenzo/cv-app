@@ -1,9 +1,7 @@
 import Education from './Components/Education';
 import Experience from './Components/Experience';
-import Input from './Components/Input';
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
-import Image from './Components/Image';
 import './Styles/App.css';
 import PersonalData from './Components/PersonalData';
 
