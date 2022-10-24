@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import image from '../Media/profile.jpg';
 
 class Image extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      loaded: false,
-      element: <input type='file' onChange={this.handleLoad} />
+      element: <img src={image} alt='Face' />
     };
   }
 
@@ -14,14 +14,18 @@ class Image extends Component {
     if (event.target.files && event.target.files[0]) {
       let imageSource = URL.createObjectURL(event.target.files[0]);
       this.setState({
-        loaded: true,
         element: <img src={imageSource} alt='Face' />
       });
     }
   };
 
   render() {
-    return <div id={this.props.id}>{this.state.element}</div>;
+    return (
+      <div id={this.props.id}>
+        {this.state.element}
+        <input type='file' onChange={this.handleLoad} />
+      </div>
+    );
   }
 }
 
