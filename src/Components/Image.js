@@ -21,7 +21,7 @@ class Image extends Component {
   };
 
   render() {
-    return <div className='image'>{this.state.element}</div>;
+    return <div id={this.props.id}>{this.state.element}</div>;
   }
 }
 
