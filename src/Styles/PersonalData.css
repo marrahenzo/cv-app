@@ -1,0 +1,27 @@
+#personal-data {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+#picture > img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#name {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#phone {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#email {
+  grid-column: 2;
+  grid-row: 3;
+}
