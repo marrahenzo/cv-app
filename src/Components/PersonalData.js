@@ -4,9 +4,8 @@ import Input from './Input';
 
 class PersonalData extends Component {
   render() {
-    const { id } = this.props;
     return (
-      <div id={id}>
+      <div id='personal-data'>
         <Image />
         <Input label='Full Name' type='text' placeholder='Hernán Marrapodi' />
         <Input label='Phone Number' type='number' placeholder='1234-5678' />

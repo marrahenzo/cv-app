@@ -80,7 +80,7 @@ class App extends Component {
     return (
       <div className='App'>
         <form onSubmit={(event) => event.preventDefault()} className='app-form'>
-          <PersonalData id='personal-data' />
+          <PersonalData />
           <div id='education'>
             {this.state.educationElements}
             <AddButton onclick={this.addEducationElement} />
