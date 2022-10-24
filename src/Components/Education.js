@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import '../Styles/Education.css';
+import DeleteButton from './DeleteButton';
 
 class Education extends Component {
   render() {
@@ -30,12 +31,11 @@ class Education extends Component {
           placeholder=''
           id='school-end'
         />
-        <button
+        <DeleteButton
           id='delete-button'
-          onClick={() => this.props.delete(this.props.listId)}
-        >
-          X
-        </button>
+          deleteFunction={this.props.delete}
+          parentId={this.props.listId}
+        />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import '../Styles/Experience.css';
+import DeleteButton from './DeleteButton';
 
 class Experience extends Component {
   render() {
@@ -21,12 +22,11 @@ class Experience extends Component {
         <textarea id='job-tasks'></textarea>
         <Input label='Worked from' type='date' placeholder='' id='job-from' />
         <Input label='Worked until' type='date' placeholder='' id='job-until' />
-        <button
+        <DeleteButton
           id='delete-button'
-          onClick={() => this.props.delete(this.props.listId)}
-        >
-          X
-        </button>
+          deleteFunction={this.props.delete}
+          parentId={this.props.listId}
+        />
       </div>
     );
   }
