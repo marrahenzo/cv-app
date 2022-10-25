@@ -10,8 +10,8 @@
   width: 1100px;
 }
 
-.app-form > * {
-  border: 2px solid blue;
+.app-form {
+  border: 5px solid rgb(190, 190, 190);
 }
 
 #button-submit {
