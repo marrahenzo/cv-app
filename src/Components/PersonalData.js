@@ -2,8 +2,31 @@ import React, { Component } from 'react';
 import Image from './Image';
 import Input from './Input';
 import '../Styles/PersonalData.css';
+import EditSubmitButton from './EditSubmitButton';
 
 class PersonalData extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mode: 'edit',
+      buttonText: 'Submit'
+    };
+  }
+
+  changeMode = () => {
+    if (this.state.mode === 'edit') {
+      this.setState({
+        mode: 'view',
+        buttonText: 'Edit'
+      });
+    } else
+      this.setState({
+        mode: 'edit',
+        buttonText: 'Submit'
+      });
+  };
+
   render() {
     return (
       <div id='personal-data'>
@@ -25,6 +48,11 @@ class PersonalData extends Component {
           type='email'
           placeholder='info@totallylegitemail.com'
           id='email'
+        />
+        <EditSubmitButton
+          id='edit-submit-button'
+          onclick={this.changeMode}
+          text={this.state.buttonText}
         />
       </div>
     );

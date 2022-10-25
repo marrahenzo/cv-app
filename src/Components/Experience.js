@@ -2,8 +2,31 @@ import React, { Component } from 'react';
 import Input from './Input';
 import '../Styles/Experience.css';
 import DeleteButton from './DeleteButton';
+import EditSubmitButton from './EditSubmitButton';
 
 class Experience extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mode: 'edit',
+      buttonText: 'Submit'
+    };
+  }
+
+  changeMode = () => {
+    if (this.state.mode === 'edit') {
+      this.setState({
+        mode: 'view',
+        buttonText: 'Edit'
+      });
+    } else
+      this.setState({
+        mode: 'edit',
+        buttonText: 'Submit'
+      });
+  };
+
   render() {
     return (
       <div className='experience'>
@@ -26,6 +49,11 @@ class Experience extends Component {
           id='delete-button'
           deleteFunction={this.props.delete}
           parentId={this.props.listId}
+        />
+        <EditSubmitButton
+          id='edit-submit-button'
+          onclick={this.changeMode}
+          text={this.state.buttonText}
         />
       </div>
     );
