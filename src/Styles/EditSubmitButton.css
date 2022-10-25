@@ -1,0 +1,18 @@
+.edit-submit-button {
+  justify-self: flex-end;
+  align-self: center;
+  background-color: crimson;
+  border: 2px solid rgb(82, 0, 0);
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-right: 100px;
+  transition: all 0.15s ease;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.edit-submit-button:hover {
+  color: crimson;
+  background-color: white;
+}
