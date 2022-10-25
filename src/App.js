@@ -5,6 +5,7 @@ import uniqid from 'uniqid';
 import './Styles/App.css';
 import PersonalData from './Components/PersonalData';
 import AddButton from './Components/AddButton';
+import creditsImage from './Media/github-logo.png';
 
 class App extends Component {
   constructor(props) {
@@ -95,11 +96,27 @@ class App extends Component {
             <AddButton onclick={this.addExperienceElement} />
           </div>
         </form>
+        <div id='copyright'>
+          <p id='credits-unsplash'>
+            Photo by{' '}
+            <a href='https://unsplash.com/@fortyozsteak?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+              Joe Shields
+            </a>{' '}
+            on{' '}
+            <a href='https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>
+              Unsplash
+            </a>
+          </p>
+          <p id='credits-name'>
+            2022 ©{' '}
+            <a href='https:/github.com/marrahenzo'>
+              Hernán Marrapodi <img src={creditsImage} alt='GitHub Logo' />
+            </a>
+          </p>
+        </div>
       </div>
     );
   }
 }
-
-/*Photo by <a href="https://unsplash.com/@fortyozsteak?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joe Shields</a> on <a href="https://unsplash.com/s/photos/profile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
 
 export default App;
