@@ -20,12 +20,17 @@ class Image extends Component {
   };
 
   render() {
-    return (
-      <div id={this.props.id}>
-        {this.state.element}
-        <input type='file' onChange={this.handleLoad} />
-      </div>
-    );
+    const { id, mode } = this.props;
+    if (mode === 'edit') {
+      return (
+        <div id={id}>
+          {this.state.element}
+          <input type='file' onChange={this.handleLoad} />
+        </div>
+      );
+    } else {
+      return <div id={id}>{this.state.element}</div>;
+    }
   }
 }
 
