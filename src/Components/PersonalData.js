@@ -30,24 +30,27 @@ class PersonalData extends Component {
   render() {
     return (
       <div id='personal-data'>
-        <Image id='picture' />
+        <Image id='picture' mode={this.state.mode} />
         <Input
           label='Full Name'
           type='text'
           placeholder='Hernán Marrapodi'
           id='name'
+          mode={this.state.mode}
         />
         <Input
           label='Phone Number'
           type='number'
           placeholder='1234-5678'
           id='phone'
+          mode={this.state.mode}
         />
         <Input
           label='E-mail'
           type='email'
           placeholder='info@totallylegitemail.com'
           id='email'
+          mode={this.state.mode}
         />
         <EditSubmitButton
           id='edit-submit-button'
