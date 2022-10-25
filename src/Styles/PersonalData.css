@@ -1,14 +1,15 @@
 #personal-data {
   display: grid;
   grid-template-columns: 400px 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 130px 130px 130px 60px;
   justify-content: center;
   align-items: center;
+  border-bottom: 5px solid black;
 }
 
 #picture {
   grid-column: 1;
-  grid-row: 1/4;
+  grid-row: 1/5;
 }
 
 #picture > img {
@@ -21,6 +22,13 @@
   grid-row: 1;
 }
 
+#pname,
+#pphone,
+#pemail {
+  font-size: 50px;
+  text-align: center;
+}
+
 #phone {
   grid-column: 2;
   grid-row: 2;
@@ -29,4 +37,25 @@
 #email {
   grid-column: 2;
   grid-row: 3;
+}
+
+#edit-submit-button {
+  grid-column: 2;
+  grid-row: 4;
+  justify-self: flex-end;
+  align-self: center;
+  background-color: crimson;
+  border: 2px solid rgb(82, 0, 0);
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-right: 100px;
+  transition: all 0.15s ease;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#edit-submit-button:hover {
+  color: crimson;
+  background-color: white;
 }
