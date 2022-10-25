@@ -41,7 +41,7 @@ class PersonalData extends Component {
         <Input
           label='Phone Number'
           type='number'
-          placeholder='1234-5678'
+          placeholder='12345678'
           id='phone'
           mode={this.state.mode}
         />
