@@ -33,7 +33,7 @@ class Education extends Component {
         <Input
           label='School name'
           type='text'
-          placeholder='Universidad de La Matanza'
+          placeholder='MarraVersity'
           id='school-name'
           mode={this.state.mode}
         />
