@@ -17,20 +17,28 @@ class Input extends Component {
   };
 
   render() {
-    const { label, type, placeholder, id } = this.props;
+    const { label, type, placeholder, id, mode } = this.props;
 
-    return (
-      <div className='input' id={id}>
-        <label htmlFor={label}>{`${label}`}</label>
-        <input
-          name={label}
-          type={type}
-          placeholder={placeholder}
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </div>
-    );
+    if (mode === 'edit') {
+      return (
+        <div className='input' id={id}>
+          <label htmlFor={label}>{`${label}`}</label>
+          <input
+            name={label}
+            type={type}
+            placeholder={placeholder}
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className='field' id={id}>
+          <p>{this.state.value}</p>
+        </div>
+      );
+    }
   }
 }
 
