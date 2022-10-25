@@ -34,7 +34,7 @@ class Input extends Component {
       );
     } else {
       return (
-        <div className='field' id={id}>
+        <div className='field' id={'p' + id}>
           <p>{this.state.value}</p>
         </div>
       );
