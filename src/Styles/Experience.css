@@ -4,31 +4,49 @@
   grid-template-rows: 50px 100px 200px 60px;
   justify-content: center;
   text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid rgb(134, 9, 34);
 }
 
-#job-name {
+#pjob-name,
+#pjob-position,
+#pjob-tasks,
+#pjob-from,
+#pjob-until {
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 30px;
+}
+
+#job-name,
+#pjob-name {
   grid-column: 2;
   grid-row: 2;
 }
 
-#job-position {
+#job-position,
+#pjob-position {
   grid-column: 3;
   grid-row: 2;
 }
 
-#job-tasks {
+#job-tasks,
+#pjob-tasks {
   grid-column: 2;
   grid-row: 3/4;
 }
 
-#job-from {
+#job-from,
+#pjob-from {
   grid-column: 3;
   grid-row: 3;
   align-self: flex-start;
   padding-top: 30px;
 }
 
-#job-until {
+#job-until,
+#pjob-until {
   grid-column: 3;
   grid-row: 3;
   align-self: flex-end;

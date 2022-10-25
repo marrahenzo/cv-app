@@ -3,24 +3,40 @@
   grid-template-columns: 10vw 1fr 1fr 10vw;
   grid-template-rows: 50px 100px 100px 60px;
   justify-content: center;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid rgb(134, 9, 34);
 }
 
-#school-name {
+#pschool-name,
+#pschool-title,
+#pschool-start,
+#pschool-end {
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 30px;
+}
+
+#school-name,
+#pschool-name {
   grid-column: 2;
   grid-row: 2;
 }
 
-#school-title {
+#school-title,
+#pschool-title {
   grid-column: 3;
   grid-row: 2;
 }
 
-#school-start {
+#school-start,
+#pschool-start {
   grid-column: 2;
   grid-row: 3;
 }
 
-#school-end {
+#school-end,
+#pschool-end {
   grid-column: 3;
   grid-row: 3;
 }

@@ -4,12 +4,23 @@
   grid-template-rows: 130px 130px 130px 60px;
   justify-content: center;
   align-items: center;
-  border-bottom: 5px solid black;
+  margin-top: 20px;
+}
+
+#personal-data::after {
+  content: '';
+  border: 2px solid rgb(134, 9, 34);
+  width: 500px;
+  margin-left: 300px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 #picture {
   grid-column: 1;
   grid-row: 1/5;
+  margin-left: 50px;
 }
 
 #picture > img {
@@ -17,16 +28,21 @@
   max-height: 400px;
 }
 
+#pname,
+#pphone,
+#pemail {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
 #name {
   grid-column: 2;
   grid-row: 1;
 }
 
-#pname,
-#pphone,
-#pemail {
+#pname {
   font-size: 50px;
-  text-align: center;
+  font-weight: bold;
 }
 
 #phone {
@@ -34,9 +50,19 @@
   grid-row: 2;
 }
 
+#pphone {
+  font-size: 35px;
+  text-decoration: underline;
+}
+
 #email {
   grid-column: 2;
   grid-row: 3;
+}
+
+#pemail {
+  font-size: 25px;
+  text-decoration: underline;
 }
 
 #edit-submit-button {
