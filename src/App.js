@@ -94,8 +94,6 @@ class App extends Component {
             {this.state.experienceElements}
             <AddButton onclick={this.addExperienceElement} />
           </div>
-          {/*Remove later if unneeded*/}
-          <button id='button-submit'>Submit</button>
         </form>
       </div>
     );
