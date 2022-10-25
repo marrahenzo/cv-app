@@ -35,24 +35,28 @@ class Education extends Component {
           type='text'
           placeholder='Universidad de La Matanza'
           id='school-name'
+          mode={this.state.mode}
         />
         <Input
           label='Title of Study'
           type='text'
           placeholder='Mobile Development'
           id='school-title'
+          mode={this.state.mode}
         />
         <Input
           label='Start of Study'
           type='date'
           placeholder=''
           id='school-start'
+          mode={this.state.mode}
         />
         <Input
           label='End of Study'
           type='date'
           placeholder=''
           id='school-end'
+          mode={this.state.mode}
         />
         <DeleteButton
           id='delete-button'

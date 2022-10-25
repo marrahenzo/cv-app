@@ -35,16 +35,36 @@ class Experience extends Component {
           type='text'
           placeholder='MarraSoft Inc.'
           id='job-name'
+          mode={this.state.mode}
         />
         <Input
           label='Position'
           type='text'
           placeholder='Full-Stack Developer'
           id='job-position'
+          mode={this.state.mode}
         />
-        <textarea id='job-tasks'></textarea>
-        <Input label='Worked from' type='date' placeholder='' id='job-from' />
-        <Input label='Worked until' type='date' placeholder='' id='job-until' />
+        <Input
+          label='Tasks'
+          type='text'
+          placeholder='Programming'
+          id='job-tasks'
+          mode={this.state.mode}
+        />
+        <Input
+          label='Worked from'
+          type='date'
+          placeholder=''
+          id='job-from'
+          mode={this.state.mode}
+        />
+        <Input
+          label='Worked until'
+          type='date'
+          placeholder=''
+          id='job-until'
+          mode={this.state.mode}
+        />
         <DeleteButton
           id='delete-button'
           deleteFunction={this.props.delete}
