@@ -59,12 +59,12 @@ class Education extends Component {
           mode={this.state.mode}
         />
         <DeleteButton
-          id='delete-button'
+          id='delete-button-education'
           deleteFunction={this.props.delete}
           parentId={this.props.listId}
         />
         <EditSubmitButton
-          id='edit-submit-button'
+          id='edit-submit-button-education'
           onclick={this.changeMode}
           text={this.state.buttonText}
         />
