@@ -1,37 +1,59 @@
 .experience {
   display: grid;
-  grid-template-columns: 1fr 1fr 10vw;
-  grid-template-rows: 50px 100px 200px 100px;
+  grid-template-columns: 10vw 1fr 1fr 10vw;
+  grid-template-rows: 50px 100px 200px 60px;
   justify-content: center;
   text-align: center;
 }
 
 #job-name {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
 }
 
 #job-position {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 2;
 }
 
 #job-tasks {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 3/4;
 }
 
 #job-from {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 3;
+  align-self: flex-start;
+  padding-top: 30px;
 }
 
 #job-until {
-  grid-column: 2;
-  grid-row: 4;
+  grid-column: 3;
+  grid-row: 3;
+  align-self: flex-end;
+  padding-bottom: 30px;
 }
 
-#delete-button {
-  grid-column: 3;
+#delete-button-experience {
+  grid-column: 4;
   grid-row: 1;
+  width: 40px;
+  height: 40px;
+  background-color: crimson;
+  border: 2px solid rgb(97, 0, 0);
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  transition: all 0.15s ease;
+}
+
+#delete-button-experience:hover {
+  background-color: white;
+  color: crimson;
+}
+
+#edit-submit-button-experience {
+  grid-column: 3/5;
+  grid-row: 4;
 }
