@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Input from './Input';
 import '../Styles/Experience.css';
 import DeleteButton from './DeleteButton';
 import EditSubmitButton from './EditSubmitButton';
 
+/*
+OLD CLASS COMPONENT IMPLEMENTATION
 class Experience extends Component {
   constructor(props) {
     super(props);
@@ -78,6 +80,71 @@ class Experience extends Component {
       </div>
     );
   }
+}
+*/
+
+function Experience(props) {
+  const [mode, setMode] = useState('edit');
+  const [buttonText, setButtonText] = useState('Submit');
+
+  const changeMode = () => {
+    if (mode === 'edit') {
+      setMode('view');
+      setButtonText('Edit');
+    } else {
+      setMode('edit');
+      setButtonText('Submit');
+    }
+  };
+  return (
+    <div className='experience'>
+      <Input
+        label='Company name'
+        type='text'
+        placeholder='MarraSoft Inc.'
+        id='job-name'
+        mode={mode}
+      />
+      <Input
+        label='Position'
+        type='text'
+        placeholder='Full-Stack Developer'
+        id='job-position'
+        mode={mode}
+      />
+      <Input
+        label='Tasks'
+        type='text'
+        placeholder='Programming'
+        id='job-tasks'
+        mode={mode}
+      />
+      <Input
+        label='Worked from'
+        type='date'
+        placeholder=''
+        id='job-from'
+        mode={mode}
+      />
+      <Input
+        label='Worked until'
+        type='date'
+        placeholder=''
+        id='job-until'
+        mode={mode}
+      />
+      <DeleteButton
+        id='delete-button-experience'
+        deleteFunction={props.delete}
+        parentId={props.listId}
+      />
+      <EditSubmitButton
+        id='edit-submit-button-experience'
+        onclick={changeMode}
+        text={buttonText}
+      />
+    </div>
+  );
 }
 
 export default Experience;

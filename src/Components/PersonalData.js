@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Image from './Image';
 import Input from './Input';
 import '../Styles/PersonalData.css';
 import EditSubmitButton from './EditSubmitButton';
 
+/*
+OLD CLASS COMPONENT IMPLEMENTATION
 class PersonalData extends Component {
   constructor(props) {
     super(props);
@@ -60,6 +62,54 @@ class PersonalData extends Component {
       </div>
     );
   }
+}
+*/
+
+function PersonalData() {
+  const [mode, setMode] = useState('edit');
+  const [buttonText, setButtonText] = useState('Submit');
+
+  const changeMode = () => {
+    if (mode === 'edit') {
+      setMode('view');
+      setButtonText('Edit');
+    } else {
+      setMode('edit');
+      setButtonText('Submit');
+    }
+  };
+
+  return (
+    <div id='personal-data'>
+      <Image id='picture' mode={mode} />
+      <Input
+        label='Full Name'
+        type='text'
+        placeholder='Hernán Marrapodi'
+        id='name'
+        mode={mode}
+      />
+      <Input
+        label='Phone Number'
+        type='number'
+        placeholder='12345678'
+        id='phone'
+        mode={mode}
+      />
+      <Input
+        label='E-mail'
+        type='email'
+        placeholder='info@totallylegitemail.com'
+        id='email'
+        mode={mode}
+      />
+      <EditSubmitButton
+        id='edit-submit-button'
+        onclick={changeMode}
+        text={buttonText}
+      />
+    </div>
+  );
 }
 
 export default PersonalData;
